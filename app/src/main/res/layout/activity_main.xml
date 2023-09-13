@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--VERDE-->
+    <LinearLayout
+        android:id="@+id/verde"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/verde"
+        android:padding="12dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LUIS EMILIO MARTINEZ HERRERA"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRACTICA 1"
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+    <!--BLANCO-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/white"
+
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/verde"
+    app:layout_constraintBottom_toTopOf="@id/rojo">
+
+        <!--linea1-->
+        <View
+            android:id="@+id/line1"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            android:background="@color/teal_700"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/line2"
+            app:layout_constraintTop_toBottomOf="@id/verde"
+            app:layout_constraintBottom_toTopOf="@id/rojo"
+            />
+
+        <!--linea2-->
+        <View
+            android:id="@+id/line2"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            android:background="@color/teal_700"
+
+            app:layout_constraintStart_toEndOf="@id/line1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verde"
+            app:layout_constraintBottom_toTopOf="@id/rojo"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--ROJO-->
+    <View
+        android:id="@+id/rojo"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@color/rojo"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verde"
+        app:layout_constraintVertical_bias="1"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
